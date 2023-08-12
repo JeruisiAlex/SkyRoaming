@@ -376,6 +376,7 @@
 "Assets/Scripts/Function/CloudDisappear.cs"
 "Assets/Scripts/Function/OrangeTurnWhite.cs"
 "Assets/Scripts/Function/Restoration.cs"
+"Assets/Scripts/Player.cs"
 -langversion:9.0
 
 /deterministic

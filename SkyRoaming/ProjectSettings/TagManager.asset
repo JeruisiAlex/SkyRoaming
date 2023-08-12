@@ -12,6 +12,7 @@ TagManager:
   - Bead
   - Ground
   - Camera
+  - Score
   layers:
   - Default
   - TransparentFX

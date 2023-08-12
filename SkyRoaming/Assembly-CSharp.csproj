@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\Function\BeadDisappear.cs" />
     <Compile Include="Assets\Scripts\Function\OrangeTurnWhite.cs" />
     <Compile Include="Assets\Scripts\Function\Restoration.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Function\CloudDisappear.cs" />
     <Compile Include="Assets\Scripts\Camera.cs" />
   </ItemGroup>
