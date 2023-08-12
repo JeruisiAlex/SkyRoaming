@@ -10,6 +10,8 @@ TagManager:
   - DarkYellow
   - Orange
   - Bead
+  - Ground
+  - Camera
   layers:
   - Default
   - TransparentFX
