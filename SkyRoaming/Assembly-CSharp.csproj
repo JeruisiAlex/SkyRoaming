@@ -56,8 +56,15 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Function\BeadDisappear.cs" />
+    <Compile Include="Assets\Scripts\Function\OrangeTurnWhite.cs" />
+    <Compile Include="Assets\Scripts\Function\Restoration.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\Camera.cs" />
+=======
+    <Compile Include="Assets\Scripts\Function\CloudDisappear.cs" />
+>>>>>>> 1b083c064b4d6b9483e3cdf4d10c2d773f0d2fdb
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
