@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3607199316424693850}
   - component: {fileID: 53891208005548929}
   - component: {fileID: 3305761333243294962}
+  - component: {fileID: -5300348073467836796}
   m_Layer: 0
   m_Name: Bead
   m_TagString: Bead
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1481957123145302083}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 26.96, y: -0.3800001, z: 0}
-  m_LocalScale: {x: 1.71, y: 0.4689, z: 1}
+  m_LocalScale: {x: 2, y: 0.05, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -111,3 +112,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-5300348073467836796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481957123145302083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6fb1860d14478e4db45282651c8338d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DisappearTime: 0.4
+  KeepTime: 0.2
