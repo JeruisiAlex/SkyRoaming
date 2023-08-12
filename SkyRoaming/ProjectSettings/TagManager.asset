@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PlatForm
+  - White
+  - LightYellow
+  - DarkYellow
+  - Orange
+  - Bead
   layers:
   - Default
   - TransparentFX
