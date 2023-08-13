@@ -5387,6 +5387,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6929690550107166501, guid: f28940eb0c6212d4bb63588842374fe3, type: 3}
+      propertyPath: NumberOfOrange
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6929690550107166502, guid: f28940eb0c6212d4bb63588842374fe3, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -5669,7 +5673,7 @@ RectTransform:
   m_Children:
   - {fileID: 1532594214}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

@@ -11,7 +11,7 @@ public class OrangeTurnWhite : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
-        if(collision.gameObject.GetComponent<Rigidbody2D>().transform.position.y - collision.gameObject.GetComponent<Rigidbody2D>().transform.localScale.y / 3 >= this.transform.position.y + this.transform.localScale.y / 2)
+        if(collision.gameObject.GetComponent<Rigidbody2D>().transform.position.y - collision.gameObject.GetComponent<Rigidbody2D>().transform.localScale.y / 2 >= this.transform.position.y )
         {
             isJump = true;
             t1 = Time.time;

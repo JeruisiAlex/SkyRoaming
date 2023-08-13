@@ -12,6 +12,7 @@ public class CloudDisappear : MonoBehaviour
     public float HighestJumpSpeed;
     public float LowestJumpSpeed;
     public float DefaultJumpSpeed;
+    public int NumberOfOrange;
 
     private void Start()
     {
@@ -27,7 +28,7 @@ public class CloudDisappear : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {   
         //���������ƶ���Ϸ��������Ҳȵ������ƶ�����Һ��·����򲻻�������Ծ��
-        if(collision.gameObject.transform.position.y + collision.gameObject.transform.localScale.y/2 <= rig.transform.position.y - rig.transform.localScale.y / 3)
+        if(collision.gameObject.transform.position.y<= rig.transform.position.y - rig.transform.localScale.y / 2)
         {
             Debug.Log("001");
             //��ɫ���ƣ�һ�Ⱦ�ɢ���Ⱥ�ԭ���ɽ�����Ծ
@@ -51,7 +52,7 @@ public class CloudDisappear : MonoBehaviour
             {
                 rig.velocity = new Vector2(0, DefaultJumpSpeed);
                 score++;
-                panel.GetComponent<TextMeshProUGUI>().text = score.ToString() + "/5";                
+                panel.GetComponent<TextMeshProUGUI>().text = score.ToString() + "/" + NumberOfOrange.ToString();                
             }
             //���ƣ��������������յķ�ʽ���֣�����Ϊ��������ݣ���ƽ̨��ȣ�����ʧ�����ɫ������ȣ�������Ծ��
         }
