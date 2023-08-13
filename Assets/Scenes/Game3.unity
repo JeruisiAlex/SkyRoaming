@@ -10630,6 +10630,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 740565143}
     m_Modifications:
+    - target: {fileID: -5713152475353303233, guid: be90fd8338fe78b4d889c287f1e0a644, type: 3}
+      propertyPath: x
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: -5713152475353303233, guid: be90fd8338fe78b4d889c287f1e0a644, type: 3}
+      propertyPath: y
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 5381237141339971299, guid: be90fd8338fe78b4d889c287f1e0a644, type: 3}
       propertyPath: m_Name
       value: GoldCoin
