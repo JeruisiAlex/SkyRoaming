@@ -10,14 +10,13 @@ public class Player : MonoBehaviour
     public float jump;
     public float x;
     public float y;
+    public bool isJump;
     private Rigidbody2D rb;
-    private bool isJump;
     private float offset;
     private bool turn;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        isJump = false;
         offset = 0;
         turn = true;
     }
@@ -30,11 +29,12 @@ public class Player : MonoBehaviour
     private void Move()
     {
         Vector2 f;
+        ;
         f.x = Input.GetAxis("Horizontal") * speed;
         if(!turn && f.x>0) Flip();
         else if(turn && f.x<0) Flip();
         if (f.x * offset > 0) f.x = 0;
-        if (isJump == true)
+        if (isJump == true )
         {
             f.y = Input.GetAxisRaw("Vertical") * jump;
         }
@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
         {
             f.y = rb.velocity.y;
         }
-        //Debug.Log(f.x + " "+f.y);
+        Debug.Log(f.x + " "+f.y);
         rb.velocity = new Vector2(f.x, f.y);
         rb.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
     }
@@ -58,8 +58,8 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("PlatForm") || collision.gameObject.CompareTag("Bead"))
         {
             //Debug.Log("002");
-            Debug.Log(collision.gameObject.transform.position.y + " " + collision.gameObject.transform.localScale.y / 2);
-            Debug.Log(rb.transform.position.y+" "+ rb.transform.localScale.y / 2);
+            //Debug.Log(collision.gameObject.transform.position.y + " " + collision.gameObject.transform.localScale.y / 2);
+            //Debug.Log(rb.transform.position.y+" "+ rb.transform.localScale.y / 2);
             if (collision.gameObject.transform.position.y + collision.gameObject.transform.localScale.y / 2 <= rb.transform.position.y - rb.transform.localScale.y / 2)
             {
                 //Debug.Log("001");
@@ -80,7 +80,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        Debug.Log("003");
+        //Debug.Log("003");
         if (collision.gameObject.CompareTag("PlatForm") || collision.gameObject.CompareTag("Bead"))
         {
             isJump = false;
