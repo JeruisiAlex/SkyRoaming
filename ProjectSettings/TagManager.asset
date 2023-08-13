@@ -13,6 +13,7 @@ TagManager:
   - Ground
   - Camera
   - Score
+  - Dust
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Image
+  - 
   - 
   - 
   - 
@@ -49,4 +50,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 943699471
     locked: 0
