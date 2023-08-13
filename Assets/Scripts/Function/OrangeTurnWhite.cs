@@ -25,6 +25,7 @@ public class OrangeTurnWhite : MonoBehaviour
             t2 = Time.time;
             if (t2 - t1 >= 0.1)
             {
+                //橘色碎云消失，白云出现
                 upcomingWhite.SetActive(true);
                 this.gameObject.SetActive(false);
             }
