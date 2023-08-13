@@ -113,7 +113,7 @@ TextureImporter:
         width: 0
         height: 0
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -125,10 +125,31 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: PlatForm_2
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 1426
+        width: 512
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b93d67dc247964390f187405bb2b59
+      internalID: -2031934576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f40a357fca5f266419570bd15e00fed8
     internalID: 0
     vertices: []
     indices: 
@@ -136,7 +157,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      PlatForm_2: -2031934576
       : 2877471580529523173
+      PlatForm_0: 218286721
+      PlatForm_1: 1616705845
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
