@@ -7204,6 +7204,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 478839431}
     m_Modifications:
+    - target: {fileID: -5713152475353303233, guid: be90fd8338fe78b4d889c287f1e0a644, type: 3}
+      propertyPath: x
+      value: -1000
+      objectReference: {fileID: 0}
+    - target: {fileID: -5713152475353303233, guid: be90fd8338fe78b4d889c287f1e0a644, type: 3}
+      propertyPath: y
+      value: -1000
+      objectReference: {fileID: 0}
     - target: {fileID: 5381237141339971299, guid: be90fd8338fe78b4d889c287f1e0a644, type: 3}
       propertyPath: m_Name
       value: GoldCoin
@@ -7214,11 +7222,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6739126494019890140, guid: be90fd8338fe78b4d889c287f1e0a644, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01
+      value: 0.59
       objectReference: {fileID: 0}
     - target: {fileID: 6739126494019890140, guid: be90fd8338fe78b4d889c287f1e0a644, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.92
+      value: 8.74
       objectReference: {fileID: 0}
     - target: {fileID: 6739126494019890140, guid: be90fd8338fe78b4d889c287f1e0a644, type: 3}
       propertyPath: m_LocalPosition.z
