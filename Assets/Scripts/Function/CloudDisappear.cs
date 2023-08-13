@@ -47,9 +47,10 @@ public class CloudDisappear : MonoBehaviour
             //橘色碎云：踩到会冒出奇妙的字母金币
             if( collision.collider.tag == "Orange")
             {
+                rig.velocity = new Vector2(0, DefaultJumpSpeed);
                 score++;
                 panel.GetComponent<TextMeshProUGUI>().text = score.ToString();
-                rig.velocity = new Vector2(0, DefaultJumpSpeed);
+                
             }
             //珠云：往往以连串紧凑的方式出现，可作为桥梁或阶梯（与平台相比，会消失；与白色碎云相比，不会跳跃）
         }
