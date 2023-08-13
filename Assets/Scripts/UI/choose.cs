@@ -25,7 +25,13 @@ public class choose : MonoBehaviour
     public void FirstPlay()
     {
         Debug.Log("1");
-        SceneManager.LoadScene("main");
+        SceneManager.LoadScene("Game1");
+        Time.timeScale = 1;
+    }
+    public void SecondPlay()
+    {
+        Debug.Log("1");
+        SceneManager.LoadScene("Game2");
         Time.timeScale = 1;
     }
     public void Otherp()
