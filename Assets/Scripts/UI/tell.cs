@@ -17,6 +17,7 @@ public class tell : MonoBehaviour
     public GameObject m3;
     public GameObject m4;
     public GameObject m5;
+    public GameObject m6;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,7 +67,8 @@ public class tell : MonoBehaviour
         {
             ch5.SetActive(false);
             ch6.SetActive(true);
-            m2.SetActive(false);
+            m5.SetActive(false);
+            m6.SetActive(true);
         }
         else if(Input.GetKeyDown(KeyCode.W) && ch6.activeSelf == true)
         {

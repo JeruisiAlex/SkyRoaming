@@ -17,10 +17,10 @@ public class cartoon : MonoBehaviour
     void Update()
     {
         Scene nowscene = SceneManager.GetActiveScene();
-        if (transform.position.x > 50&&SceneManager.sceneCount<2)
+        if (transform.position.x > 48&& transform.position.y>6& SceneManager.sceneCount<2)
         {
             Time.timeScale = 0;
-            SceneManager.LoadScene("cartool", LoadSceneMode.Additive);
+            SceneManager.LoadScene("choose");
 
         }
     }

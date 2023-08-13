@@ -36,6 +36,7 @@ public class choose : MonoBehaviour
     }
     public void Otherp()
     {
-        Prompt.SetActive(true);
+        SceneManager.LoadScene("Game3");
+        Time.timeScale = 1;
     }
 }

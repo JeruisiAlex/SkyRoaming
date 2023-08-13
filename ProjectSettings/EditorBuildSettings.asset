@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Game2.unity
     guid: 5d2fcfba1bdd51345bc83e277a6829d9
   - enabled: 1
+    path: Assets/Scenes/Game3.unity
+    guid: 9f75d0902aa9c104eaa6291b9d7042c6
+  - enabled: 1
     path: Assets/Scenes/cartool.unity
     guid: 0165a3532e4121241be0a63d024dc955
   m_configObjects: {}
