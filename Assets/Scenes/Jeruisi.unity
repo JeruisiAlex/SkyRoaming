@@ -1640,6 +1640,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2518274881139484415, guid: 694db262dbf287b4e9091f80f6c81df0, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3953377942773161277, guid: 694db262dbf287b4e9091f80f6c81df0, type: 3}
       propertyPath: m_Name
       value: PlatForm (1)
