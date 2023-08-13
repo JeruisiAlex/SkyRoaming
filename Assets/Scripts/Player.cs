@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private float offset;
     private bool turn;
+    public ParticleSystem dust;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -31,6 +33,7 @@ public class Player : MonoBehaviour
     {
         Vector2 f;
         f.x = Input.GetAxis("Horizontal") * speed;
+
         //Debug.Log(isJump);
         if (!turn && f.x>0) Flip();
         else if(turn && f.x<0) Flip();
@@ -56,6 +59,10 @@ public class Player : MonoBehaviour
         Vector3 playerScale = rb.transform.localScale;
         playerScale.x *= -1;
         rb.transform.localScale = playerScale;
+        if(isJump == 1)
+        {
+            dust.Play();
+        }
         turn = !turn;
     }
     private void OnCollisionEnter2D(Collision2D collision)
