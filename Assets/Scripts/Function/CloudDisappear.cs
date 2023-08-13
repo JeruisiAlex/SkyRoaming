@@ -29,6 +29,7 @@ public class CloudDisappear : MonoBehaviour
         //玩家仅站在平台上方时可以触发跳跃buff
         if(collision.gameObject.transform.position.y<= rig.transform.position.y - rig.transform.localScale.y / 2)
         {
+            if(collision.collider.tag != "PlatForm" && collision.collider.tag != "Bead" ) collision.gameObject.GetComponent<AudioSource>().Play();
             //白色碎云：一踩就跳
             if (collision.collider.tag == "White")
             {
