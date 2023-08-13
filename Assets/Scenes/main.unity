@@ -3526,6 +3526,7 @@ MonoBehaviour:
   jump: 7
   x: 0
   y: 0
+  isJump: 1
 --- !u!114 &1860645736
 MonoBehaviour:
   m_ObjectHideFlags: 0
