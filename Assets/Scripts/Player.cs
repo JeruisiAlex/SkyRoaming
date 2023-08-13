@@ -59,7 +59,10 @@ public class Player : MonoBehaviour
         Vector3 playerScale = rb.transform.localScale;
         playerScale.x *= -1;
         rb.transform.localScale = playerScale;
-        dust.Play();
+        if(isJump == 1)
+        {
+            dust.Play();
+        }
         turn = !turn;
     }
     private void OnCollisionEnter2D(Collision2D collision)

@@ -47,7 +47,13 @@ public class MeauList : MonoBehaviour
     public void Exit()
     {
         Debug.Log("f");
-        SceneManager.LoadScene("main");
+        SceneManager.LoadScene("Game1");
+        Time.timeScale = 1;
+    }
+    public void Exit2()
+    {
+        Debug.Log("f");
+        SceneManager.LoadScene("Game2");
         Time.timeScale = 1;
     }
 }
