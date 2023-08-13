@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class tell : MonoBehaviour
 {
@@ -12,10 +14,14 @@ public class tell : MonoBehaviour
     public GameObject ch6;
     public GameObject m1;
     public GameObject m2;
+    public GameObject m3;
+    public GameObject m4;
+    public GameObject m5;
     // Start is called before the first frame update
     void Start()
     {
-        
+        ch1.SetActive(true);
+        m1.SetActive(true);
     }
 
     // Update is called once per frame
@@ -39,24 +45,32 @@ public class tell : MonoBehaviour
         {
             ch2.SetActive(false);
             ch3.SetActive(true);
+            m2.SetActive(false);
+            m3.SetActive(true);
         }
         else if (Input.GetKeyDown(KeyCode.W) && ch3.activeSelf == true)
         {
             ch3.SetActive(false);
             ch4.SetActive(true);
-            m1.SetActive(true);
+            m3.SetActive(false);
+            m4.SetActive(true);
         }
         else if (Input.GetKeyDown(KeyCode.W) && ch4.activeSelf == true)
         {
             ch4.SetActive(false);
             ch5.SetActive(true);
-            
+            m4.SetActive(false);
+            m5.SetActive(true);
         }
         else if (Input.GetKeyDown(KeyCode.W) && ch5.activeSelf == true)
         {
             ch5.SetActive(false);
             ch6.SetActive(true);
             m2.SetActive(false);
+        }
+        else if(Input.GetKeyDown(KeyCode.W) && ch6.activeSelf == true)
+        {
+            SceneManager.LoadScene("choose");
         }
     }
 }
