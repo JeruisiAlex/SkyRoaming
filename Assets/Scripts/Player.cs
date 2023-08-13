@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     {
         Vector2 f;
         f.x = Input.GetAxis("Horizontal") * speed;
-        Debug.Log(isJump);
+        //Debug.Log(isJump);
         if (!turn && f.x>0) Flip();
         else if(turn && f.x<0) Flip();
         if (f.x * offset > 0) f.x = 0;
