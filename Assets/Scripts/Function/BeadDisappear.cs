@@ -8,7 +8,7 @@ public class BeadDisappear : MonoBehaviour
     public float DisappearTime,KeepTime;
     private float t1, t2;
     private bool isDisappear = false;
-    private Vector2 defaultVector;
+    private Vector3 defaultVector;
 
     private void Start()
     {
@@ -40,7 +40,7 @@ public class BeadDisappear : MonoBehaviour
             else if(t2-t1 >=KeepTime)
             {
                 Debug.Log("001");
-                transform.localScale = new Vector2(0,0);//ÈÃÖéÔÆÏûÊ§
+                transform.localScale = new Vector3(0,0,0);//ÈÃÖéÔÆÏûÊ§
             }
         }
 

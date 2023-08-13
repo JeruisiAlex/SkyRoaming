@@ -58,8 +58,8 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("PlatForm") || collision.gameObject.CompareTag("Bead"))
         {
             //Debug.Log("002");
-            //Debug.Log(collision.gameObject.transform.position.y + " " + collision.gameObject.transform.localScale.y / 2);
-            //Debug.Log(rb.transform.position.y+" "+ rb.transform.localScale.y / 2);
+            Debug.Log(collision.gameObject.transform.position.y + " " + collision.gameObject.transform.localScale.y / 2);
+            Debug.Log(rb.transform.position.y+" "+ rb.transform.localScale.y / 2);
             if (collision.gameObject.transform.position.y + collision.gameObject.transform.localScale.y / 2 <= rb.transform.position.y - rb.transform.localScale.y / 2)
             {
                 //Debug.Log("001");
@@ -80,6 +80,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
+        Debug.Log("003");
         if (collision.gameObject.CompareTag("PlatForm") || collision.gameObject.CompareTag("Bead"))
         {
             isJump = false;
