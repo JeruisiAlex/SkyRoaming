@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public float jump;
     public float x;
     public float y;
-    public bool isJump;
+    private int isJump = 1;
     private Rigidbody2D rb;
     private float offset;
     private bool turn;
@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         offset = 0;
         turn = true;
+        isJump = 1;
     }
 
     // Update is called once per frame
@@ -29,22 +30,26 @@ public class Player : MonoBehaviour
     private void Move()
     {
         Vector2 f;
-        ;
         f.x = Input.GetAxis("Horizontal") * speed;
-        if(!turn && f.x>0) Flip();
+        //Debug.Log(isJump);
+        if (!turn && f.x>0) Flip();
         else if(turn && f.x<0) Flip();
         if (f.x * offset > 0) f.x = 0;
-        if (isJump == true )
+        if (isJump == 1 )
         {
             f.y = Input.GetAxisRaw("Vertical") * jump;
+            if (f.y > 0)
+            {
+                isJump = 0;
+            }
         }
         else
         {
             f.y = rb.velocity.y;
         }
-        Debug.Log(f.x + " "+f.y);
+        //Debug.Log(f.x + " "+f.y);
         rb.velocity = new Vector2(f.x, f.y);
-        rb.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+        rb.transform.eulerAngles = Vector3.zero;
     }
     private void Flip()
     {
@@ -63,12 +68,11 @@ public class Player : MonoBehaviour
             if (collision.gameObject.transform.position.y + collision.gameObject.transform.localScale.y / 2 <= rb.transform.position.y - rb.transform.localScale.y / 2)
             {
                 //Debug.Log("001");
-                isJump = true;
+                if(isJump == 0) isJump = 1;
                 offset = 0;
             }
             else
             {
-                isJump = false;
                 offset = collision.gameObject.transform.position.x - rb.transform.position.x;
             }
         }
@@ -83,7 +87,7 @@ public class Player : MonoBehaviour
         //Debug.Log("003");
         if (collision.gameObject.CompareTag("PlatForm") || collision.gameObject.CompareTag("Bead"))
         {
-            isJump = false;
+            isJump = 0;
             offset = 0;
         }
     }
