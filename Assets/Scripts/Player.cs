@@ -10,11 +10,12 @@ public class Player : MonoBehaviour
     public float jump;
     public float x;
     public float y;
+    public ParticleSystem dust;
+    public GameObject species;
     private int isJump = 1;
     private Rigidbody2D rb;
     private float offset;
     private bool turn;
-    public ParticleSystem dust;
 
     void Start()
     {
@@ -86,6 +87,11 @@ public class Player : MonoBehaviour
         else if (collision.gameObject.CompareTag("Ground"))
         {
             BackToOrigin();
+        }
+        else if (collision.gameObject.CompareTag("Orange"))
+        {
+            species.transform.position = new Vector2(rb.transform.position.x, rb.transform.position.y+3);
+            species.GetComponent<GoldCoin>().count = 50;
         }
     }
 
