@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/choose.unity
     guid: 78c0a3ae98394294aa4db655fea20e0c
   - enabled: 1
-    path: Assets/Scenes/main.unity
+    path: Assets/Scenes/Game1.unity
     guid: 3d13ef904ee8834469467c7b160b4014
   - enabled: 1
     path: Assets/Scenes/cartool.unity
