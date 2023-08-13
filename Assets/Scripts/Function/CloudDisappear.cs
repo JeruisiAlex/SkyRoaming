@@ -15,44 +15,45 @@ public class CloudDisappear : MonoBehaviour
 
     private void Start()
     {
-        //╩Ях║мФ╪риМио╧рть╣дRigidbodyвИ╪Ч
+        //О©╫О©╫х║О©╫О©╫О©╫О©╫О©╫О©╫о╧О©╫О©╫ь╣О©╫RigidbodyО©╫О©╫О©╫
         player = GameObject.FindWithTag("Player");
         rig = player.GetComponent<Rigidbody2D>();
         score = 0;
-        //╩Ях║UI╣днд╠╬пео╒
+        //О©╫О©╫х║UIО©╫О©╫О©╫д╠О©╫О©╫О©╫о╒
         panel = GameObject.FindWithTag("Score");
 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {   
-        //хГ╧ШмФ╪ртзтф╤Д╣дио╥╫ё╗хГ╧ШмФ╪р╡х╣╫╣дйгтф╤Д╣двСср╨моб╥╫ё╛тР╡╩╩АрЩфПлЬт╬ё╘
+        //О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ф╤О©╫О©╫О©╫о╥О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫р╡х╣О©╫О©╫О©╫О©╫О©╫О©╫ф╤О©╫О©╫О©╫О©╫О©╫р╨О©╫О©╫б╥О©╫О©╫О©╫О©╫Р╡╩╩О©╫О©╫О©╫О©╫О©╫О©╫О©╫т╬О©╫О©╫
         if(collision.gameObject.transform.position.y + collision.gameObject.transform.localScale.y/2 <= player.transform.position.y - player.transform.localScale.y / 3)
         {
-            //╟ви╚кИтфё╨р╩╡х╬ми╒ё╛╡х╨С╦╢т╜ё╛©и╫Ха╕лЬт╬
+            Debug.Log("001");
+            //О©╫О©╫и╚О©╫О©╫О©╫фёО©╫р╩О©╫х╬О©╫и╒О©╫О©╫О©╫х╨О©╫т╜О©╫О©╫О©╫и╫О©╫О©╫О©╫О©╫О©╫т╬
             if (collision.collider.tag == "White")
             {
                 rig.velocity = new Vector2(0,DefaultJumpSpeed);
             }
-            //гЁ╩фи╚кИтфё╨╩Ы╠╬льптсК╟ви╚кИтфоЮкфё╛╣╚╡хио╩АлЬ╦Э╦ъ
+            //гЁО©╫О©╫и╚О©╫О©╫О©╫фёО©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫и╚О©╫О©╫О©╫О©╫О©╫О©╫О©╫фёО©╫О©╫О©╫О©╫О©╫О©╫о╩О©╫О©╫О©╫О©╫О©╫О©╫О©╫
             if (collision.collider.tag == "LightYellow")
             {
                 rig.velocity = new Vector2(0, HighestJumpSpeed);
             }
-            //иН╩фи╚кИтфё╨╩Ы╠╬льптсК╟ви╚кИтфоЮкфё╛╣╚╡хио╩АлЬ╦Э╣м
+            //О©╫О©╫О©╫и╚О©╫О©╫О©╫фёО©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫и╚О©╫О©╫О©╫О©╫О©╫О©╫О©╫фёО©╫О©╫О©╫О©╫О©╫О©╫о╩О©╫О©╫О©╫О©╫О©╫О©╫О©╫
             if(collision.collider.tag == "DarkYellow")
             {
+                
                 rig.velocity = new Vector2(0, LowestJumpSpeed);
             }
-            //Иыи╚кИтфё╨╡х╣╫╩Ац╟ЁЖфФцН╣двжд╦╫П╠р
+            //О©╫О©╫и╚О©╫О©╫О©╫фёО©╫О©╫х╣О©╫О©╫О©╫ц╟О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╦О©╫О©╫О©╫
             if( collision.collider.tag == "Orange")
             {
                 rig.velocity = new Vector2(0, DefaultJumpSpeed);
                 score++;
-                panel.GetComponent<TextMeshProUGUI>().text = score.ToString();
-                
+                panel.GetComponent<TextMeshProUGUI>().text = score.ToString() + "/5";                
             }
-            //жИтфё╨мЫмЫрта╛╢╝╫Т╢у╣д╥╫й╫ЁЖожё╛©ивВн╙геа╨╩Р╫влщё╗сКф╫л╗оЮ╠хё╛╩АоШй╖ё╩сК╟ви╚кИтфоЮ╠хё╛╡╩╩АлЬт╬ё╘
+            //О©╫О©╫О©╫фёО©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫у╣д╥О©╫й╫О©╫О©╫О©╫жёО©╫О©╫О©╫О©╫О©╫н╙О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫щёО©╫О©╫О©╫ф╫л╗О©╫О©╫хёО©╫О©╫О©╫О©╫О©╫й╖О©╫О©╫О©╫О©╫О©╫и╚О©╫О©╫О©╫О©╫О©╫О©╫хёО©╫О©╫О©╫О©╫О©╫О©╫О©╫т╬О©╫О©╫
         }
         
     }
