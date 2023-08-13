@@ -19,6 +19,7 @@ public class BeadDisappear : MonoBehaviour
     {
         if(collision.gameObject.transform.position.y - collision.gameObject.transform.localScale.y/3 >= this.transform.position.y + this.transform.localScale.y / 2)
         {
+            Debug.Log("002");
             t1 = Time.time;
             isDisappear = true;
         }
@@ -30,14 +31,16 @@ public class BeadDisappear : MonoBehaviour
         if (isDisappear)
         {
             t2 = Time.time;
-            if(t2-t1 >=KeepTime)
-            {
-                transform.localScale = new Vector2(0,0);//ÈÃÖéÔÆÏûÊ§
-            }
+            
             if(t2-t1 >= KeepTime + DisappearTime)
             {
                 isDisappear=false;
                 transform.localScale = defaultVector;//ÖéÔÆ³öÏÖ
+            }
+            else if(t2-t1 >=KeepTime)
+            {
+                Debug.Log("001");
+                transform.localScale = new Vector2(0,0);//ÈÃÖéÔÆÏûÊ§
             }
         }
 
