@@ -12,50 +12,49 @@ public class CloudDisappear : MonoBehaviour
     public float HighestJumpSpeed;
     public float LowestJumpSpeed;
     public float DefaultJumpSpeed;
+    public int NumberOfOrange;
 
     private void Start()
     {
-        //��ȡ������Ϲ��ص�Rigidbody���
         player = GameObject.FindWithTag("Player");
         rig = player.GetComponent<Rigidbody2D>();
         score = 0;
-        //��ȡUI���ı���Ϣ
+        //找到计分UI
         panel = GameObject.FindWithTag("Score");
 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {   
-        //���������ƶ���Ϸ��������Ҳȵ������ƶ�����Һ��·����򲻻�������Ծ��
-        if(collision.gameObject.transform.position.y + collision.gameObject.transform.localScale.y/2 <= player.transform.position.y - player.transform.localScale.y / 3)
+        //玩家仅站在平台上方时可以触发跳跃buff
+        if(collision.gameObject.transform.position.y<= rig.transform.position.y - rig.transform.localScale.y / 2)
         {
-            Debug.Log("001");
-            //��ɫ���ƣ�һ�Ⱦ�ɢ���Ⱥ�ԭ���ɽ�����Ծ
+            //白色碎云：一踩就跳
             if (collision.collider.tag == "White")
             {
                 rig.velocity = new Vector2(0,DefaultJumpSpeed);
             }
-            //ǳ��ɫ���ƣ������������ɫ�������ƣ������ϻ�������
+            //浅黄色碎云：基本特性与白色碎云相似，但踩上会跳更高
             if (collision.collider.tag == "LightYellow")
             {
                 rig.velocity = new Vector2(0, HighestJumpSpeed);
             }
-            //���ɫ���ƣ������������ɫ�������ƣ������ϻ�������
-            if(collision.collider.tag == "DarkYellow")
+            //深黄色碎云：基本特性与白色碎云相似，但踩上会跳更低
+            if (collision.collider.tag == "DarkYellow")
             {
                 
                 rig.velocity = new Vector2(0, LowestJumpSpeed);
             }
-            //��ɫ���ƣ��ȵ���ð���������ĸ���
-            if( collision.collider.tag == "Orange")
+            //橘色碎云：踩到会冒出奇妙的金币，并在计分UI上计分。橘云一踩则消失，消失后永久变为白色碎云。
+            if ( collision.collider.tag == "Orange")
             {
                 rig.velocity = new Vector2(0, DefaultJumpSpeed);
                 score++;
-                panel.GetComponent<TextMeshProUGUI>().text = score.ToString() + "/5";                
+                panel.GetComponent<TextMeshProUGUI>().text = score.ToString() + "/" + NumberOfOrange.ToString();                
             }
-            //���ƣ��������������յķ�ʽ���֣�����Ϊ��������ݣ���ƽ̨��ȣ�����ʧ�����ɫ������ȣ�������Ծ��
+            //珠云：往往以连串紧凑的方式出现，可作为桥梁或阶梯
         }
-        
+
     }
 
 }

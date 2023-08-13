@@ -10,7 +10,8 @@ public class OrangeTurnWhite : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.transform.position.y - collision.gameObject.transform.localScale.y / 3 >= this.transform.position.y + this.transform.localScale.y / 2)
+        
+        if(collision.gameObject.GetComponent<Rigidbody2D>().transform.position.y - collision.gameObject.GetComponent<Rigidbody2D>().transform.localScale.y / 2 >= this.transform.position.y )
         {
             isJump = true;
             t1 = Time.time;
@@ -24,6 +25,7 @@ public class OrangeTurnWhite : MonoBehaviour
             t2 = Time.time;
             if (t2 - t1 >= 0.1)
             {
+                //橘色碎云消失，白云出现
                 upcomingWhite.SetActive(true);
                 this.gameObject.SetActive(false);
             }

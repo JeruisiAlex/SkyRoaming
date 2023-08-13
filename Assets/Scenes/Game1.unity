@@ -5387,6 +5387,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6929690550107166501, guid: f28940eb0c6212d4bb63588842374fe3, type: 3}
+      propertyPath: NumberOfOrange
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6929690550107166502, guid: f28940eb0c6212d4bb63588842374fe3, type: 3}
       propertyPath: m_SortingLayer
       value: 1
