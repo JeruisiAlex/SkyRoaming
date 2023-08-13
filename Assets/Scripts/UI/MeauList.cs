@@ -40,8 +40,8 @@ public class MeauList : MonoBehaviour
     {
         Debug.Log("f");
         SceneManager.LoadScene("choose");
-        menuList.SetActive(false);
-        Debug.Log(menuList.activeSelf);
+       // menuList.SetActive(false);
+        //Debug.Log(menuList.activeSelf);
         Time.timeScale = 1;
     }
     public void Exit()
