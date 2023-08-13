@@ -5,7 +5,7 @@ using UnityEngine;
 public class BeadDisappear : MonoBehaviour
 {
     //DisappearTime表示云朵消失状态维持时间，KeepTime表示珠云维持可视状态的时间
-    public float DisappearTime,KeepTime;
+    public float DisappearTime, KeepTime;
     private float t1, t2;
     private bool isDisappear = false;
     private Vector3 defaultVector;
