@@ -124,5 +124,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6fb1860d14478e4db45282651c8338d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DisappearTime: 0.4
+  DisappearTime: 1.4
   KeepTime: 0.4
