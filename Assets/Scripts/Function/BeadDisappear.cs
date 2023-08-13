@@ -17,8 +17,12 @@ public class BeadDisappear : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        t1 = Time.time;
-        isDisappear = true;
+        if(collision.gameObject.transform.position.y - collision.gameObject.transform.localScale.y/3 >= this.transform.position.y + this.transform.localScale.y / 2)
+        {
+            t1 = Time.time;
+            isDisappear = true;
+        }
+
     }
 
     private void Update()
