@@ -27,7 +27,7 @@ public class CloudDisappear : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {   
         //���������ƶ���Ϸ��������Ҳȵ������ƶ�����Һ��·����򲻻�������Ծ��
-        if(collision.gameObject.transform.position.y + collision.gameObject.transform.localScale.y/2 <= player.transform.position.y - player.transform.localScale.y / 3)
+        if(collision.gameObject.transform.position.y + collision.gameObject.transform.localScale.y/2 <= rig.transform.position.y - rig.transform.localScale.y / 3)
         {
             Debug.Log("001");
             //��ɫ���ƣ�һ�Ⱦ�ɢ���Ⱥ�ԭ���ɽ�����Ծ

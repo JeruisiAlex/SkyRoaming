@@ -17,7 +17,7 @@ public class Restoration : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.transform.position.y - collision.gameObject.transform.localScale.y / 3 >= this.transform.position.y + this.transform.localScale.y / 2)
+        if(collision.gameObject.GetComponent<Rigidbody2D>().transform.position.y - collision.gameObject.GetComponent<Rigidbody2D>().transform.localScale.y / 3 >= this.transform.position.y + this.transform.localScale.y / 2)
         {
             transform.localScale =new Vector2(0,0);
             t1  = Time.time;
