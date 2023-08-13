@@ -167,6 +167,7 @@ MonoBehaviour:
   jump: 7
   x: 0
   y: 0
+  dust: {fileID: 0}
 --- !u!95 &2384696500563495634
 Animator:
   serializedVersion: 5
