@@ -8,9 +8,11 @@ public class GoldCoin : MonoBehaviour
     public int count;
     public int x;
     public int y;
+    private AudioSource goldCoinAudio;
     void Start()
     {
         count= 0;
+        goldCoinAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -18,6 +20,7 @@ public class GoldCoin : MonoBehaviour
     {
         if (count > 0)
         {
+            if (count == 50) goldCoinAudio.Play();
             count--;
         }
         else if (count == 0)

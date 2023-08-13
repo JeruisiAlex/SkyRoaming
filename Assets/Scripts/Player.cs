@@ -16,10 +16,11 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private float offset;
     private bool turn;
-
+    private AudioSource jumpAudio;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        jumpAudio = GetComponent<AudioSource>();
         offset = 0;
         turn = true;
         isJump = 1;
@@ -44,6 +45,7 @@ public class Player : MonoBehaviour
             f.y = Input.GetAxisRaw("Vertical") * jump;
             if (f.y > 0)
             {
+                jumpAudio.Play();
                 isJump = 0;
             }
         }
@@ -71,11 +73,11 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("PlatForm") || collision.gameObject.CompareTag("Bead"))
         {
             //Debug.Log("002");
-            Debug.Log(collision.gameObject.transform.position.y + " " + collision.gameObject.transform.localScale.y / 2);
-            Debug.Log(rb.transform.position.y+" "+ rb.transform.localScale.y / 2);
+            //Debug.Log(collision.gameObject.transform.position.y + " " + collision.gameObject.transform.localScale.y / 2);
+            //Debug.Log(rb.transform.position.y+" "+ rb.transform.localScale.y / 2);
             if (collision.gameObject.transform.position.y <= rb.transform.position.y - rb.transform.localScale.y / 2)
             {
-                Debug.Log("001");
+                //Debug.Log("001");
                 if(isJump == 0) isJump = 1;
                 offset = 0;
             }
@@ -88,7 +90,7 @@ public class Player : MonoBehaviour
         {
             BackToOrigin();
         }
-        else if (collision.gameObject.CompareTag("Orange"))
+        else if (collision.gameObject.CompareTag("Orange") && collision.gameObject.transform.position.y <= rb.transform.position.y - rb.transform.localScale.y / 2)
         {
             species.transform.position = new Vector2(rb.transform.position.x, rb.transform.position.y+3);
             species.GetComponent<GoldCoin>().count = 50;
